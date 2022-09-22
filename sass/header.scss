@@ -1,0 +1,42 @@
+
+/* le menu de navigation */
+.navigation{
+    & .nav_logo {
+       padding-top: 21px;
+       padding-bottom: 13px;
+       border: 1px solid transparent;
+       text-align: center;
+       position: relative;
+       & img{
+          width: 200px;
+          height: 30px;
+        }
+       & .card_img{
+            position: absolute;
+            left: 25px;
+            font-size: 25px;
+            font-family: Shrikhand;  
+        }
+    }
+    & .nav_paragraph{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 10px;
+       
+       background-color: #eeeeee;
+       box-shadow: inset 0px 3px 5px #dfdfdf;
+       padding: 20px;
+       & .fa-solid{
+        font-size: 20px;
+       } 
+       & input{
+           background-color: #eeeeee;
+           border: none;
+           &::placeholder{
+              color: rgb(26, 24, 24);
+              font-size: 18px;
+            }
+        }
+    }
+}

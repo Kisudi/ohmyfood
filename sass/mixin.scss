@@ -1,0 +1,95 @@
+@mixin loader {
+    .bloc1:nth-child(1){
+        left: 8px;
+        animation: lds-ellipsis1 0.6s infinite;
+    }
+    .bloc2:nth-child(2){
+        left: 32px;
+        animation: lds-ellipsis2 0.6s infinite;
+    }
+    .bloc3:nth-child(3){
+        left: 56px;
+        animation: lds-ellipsis2 0.6s infinite;
+    }
+    .bloc1:nth-child(4){
+        left: 56px;
+        animation: lds-ellipsis3 0.6s infinite;
+    }
+}
+@mixin color-loader {
+    .bloc1{
+        color: $color-primary;
+    }
+    .bloc2{
+        color: $color-secondary;
+    }
+    .bloc3{
+        color: $color-tertiaire;
+    }
+}
+@mixin nav-shadow{
+    box-shadow: 0px 0px 5px 1px #8b8686;
+}
+@mixin button {
+    .nav_button{
+        padding: 20px;
+        color: white;
+        font-size: 15px;
+        border-radius: 30px;
+        border: none;
+        width: 250px;
+        background: linear-gradient($color-primary, $color-secondary);
+        box-shadow: 1px 5px 8px rgb(165, 163, 163);
+        &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+            box-shadow: 1px 5px 2px rgb(100, 99, 99);
+        }
+        
+    }
+}
+@mixin section-shadow {
+    box-shadow: 1px 5px 8px rgb(228, 225, 225);
+}
+@mixin family {
+    font-family: Shrikhand;
+}
+@mixin hover {
+    cursor: pointer;
+    background: linear-gradient($color-primary, $color-secondary);   
+}
+
+@mixin fas {
+    
+        &::before{
+           font-family: "Font Awesome 6 Free";
+           font-weight: 100;
+           content: '\f004';
+           opacity: 1;
+           font-size: 25px;
+           
+        }
+        &::after{
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: '\f004';
+            position: absolute;
+            right: 20px;
+            background-image: -webkit-linear-gradient($color-primary, $color-secondary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            font-size: 25px;   
+        }
+        &:hover{
+            &::after{
+               opacity: 1;
+               transition: all 2000ms ease-in-out;  
+              } 
+            &::before{
+               opacity: 0;
+              }
+
+          }
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import 'variables.scss';
+@import 'mixin.scss';
+@import 'header.scss'; 
+@import 'section.scss';
+@import 'animation.scss';
+@import 'menu.scss';
+@import 'footer.scss';
+
+*, ::after, ::before{
+    box-sizing : border-box;   
+}
+body {
+    margin: 0px;
+    font-family:'Roboto';  
+}
+.page_ohmyfood{
+    max-width: 992px;
+    margin: auto;
+}
+/* loader page d'accueil */
+
+.lds-ellipsis{
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    inset: 0;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include loader;
+    @include color-loader;
+    animation:  loader 10s forwards;
+    font-size: 30px;  
+}
+/* description page d'accueil*/
+
+.nav_description{
+    text-align: center;
+    background-color: $color-chine;
+    height: 300px;
+    margin-top: 0px;
+    border: 1px solid transparent;
+    font-size: 20px;
+    @include button;
+}

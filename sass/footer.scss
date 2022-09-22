@@ -1,0 +1,25 @@
+/* footer pour toutes les pages*/
+
+.footer{
+    color: $color-white;
+    background-color: black;
+    height: 300px;
+    padding-top: 30px;
+    padding: 25px;
+    & p {
+        font-family: Shrikhand;     
+    }
+    & a {
+        margin-top: 15px;
+        text-decoration: none;
+        color: rgb(192, 185, 185);
+        display: flex;
+        font-size: 18px;
+        align-items: center;
+    }
+    & .fa-solid{
+        margin-right: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+}
