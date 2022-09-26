@@ -34,7 +34,7 @@ body {
     justify-content: center;
     @include loader;
     @include color-loader;
-    animation:  loader 10s forwards;
+    animation:  loader 3s forwards;
     font-size: 30px;  
 }
 /* description page d'accueil*/

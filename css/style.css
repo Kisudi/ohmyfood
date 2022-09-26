@@ -155,10 +155,10 @@
 }
 .menu .menu_card .card .card_descri .fas:hover::after {
   opacity: 1;
-  transition: all 2000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 .menu .menu_card .card .card_descri .fas:hover::before {
-  opacity: 0;
+  opacity: 0.9;
 }
 .menu .menu_card .card img {
   width: 100%;
@@ -270,10 +270,10 @@
 }
 .card .card_wrapper .card_title .fas:hover::after {
   opacity: 1;
-  transition: all 2000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 .card .card_wrapper .card_title .fas:hover::before {
-  opacity: 0;
+  opacity: 0.9;
 }
 .card .card_wrapper .card_menus {
   display: grid;
@@ -343,7 +343,7 @@
   justify-content: center;
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
-  margin-right: -70px;
+  margin-right: -90px;
   transition: all 0.5s;
 }
 .card .card_wrapper .card_menus .menus .menus_description .check i {
@@ -443,7 +443,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: loader 10s forwards;
+  animation: loader 3s forwards;
   font-size: 30px;
 }
 .lds-ellipsis .bloc1:nth-child(1) {
@@ -457,10 +457,6 @@ body {
 .lds-ellipsis .bloc3:nth-child(3) {
   left: 56px;
   animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis .bloc1:nth-child(4) {
-  left: 56px;
-  animation: lds-ellipsis3 0.6s infinite;
 }
 .lds-ellipsis .bloc1 {
   color: #FF79DA;

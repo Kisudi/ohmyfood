@@ -11,10 +11,6 @@
         left: 56px;
         animation: lds-ellipsis2 0.6s infinite;
     }
-    .bloc1:nth-child(4){
-        left: 56px;
-        animation: lds-ellipsis3 0.6s infinite;
-    }
 }
 @mixin color-loader {
     .bloc1{
@@ -85,11 +81,11 @@
         &:hover{
             &::after{
                opacity: 1;
-               transition: all 2000ms ease-in-out;  
-              } 
+               transition: all 1000ms ease-in-out;  
+            } 
             &::before{
-               opacity: 0;
-              }
+                opacity: 0.9;
+            }
 
           }
 }
