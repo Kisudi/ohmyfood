@@ -24,7 +24,7 @@
         position: relative;
         & .card_menus{
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             gap:40px;
             & .element1:nth-child(n+1){
                 animation: 2.5s  affichage ease-in-out;
@@ -40,8 +40,15 @@
                 grid-template-columns: repeat(1, 1fr);
                 gap:20px;
                 & >h3{
-                    border-bottom: 2px solid $color-tertiaire;
-                    width: 48px;
+                    position: relative;
+                    &::before{
+                        content: "";
+                        background-color: $color-tertiaire;
+                        position: absolute;
+                        bottom: -8px;
+                        width: 47px;
+                        height: 4px;
+                    }
                 }
                 & .menus_description{
                     background-color: $color-white;
@@ -124,14 +131,20 @@
     font-weight: 800;
 }
 
-@media (max-width:860px) {
+@media (min-width:768px) {
     .card{
        & .card_wrapper{
             & .card_menus{
-                grid-template-columns: repeat(1, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap:20px;
+                & .menus_description{
+                    & .menus_price{
+                       margin-right: 15px;
+                    }
+                }
             }
         }
     }
+    
     
 }

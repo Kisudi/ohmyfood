@@ -18,6 +18,7 @@
   left: 25px;
   font-size: 25px;
   font-family: Shrikhand;
+  color: black;
 }
 .navigation .nav_paragraph {
   display: flex;
@@ -51,14 +52,16 @@
 }
 .liste .liste_fonc {
   display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 .liste .liste_fonc li {
   border-radius: 15px;
+  font-weight: 600;
   padding: 20px;
   position: relative;
   background-color: #f6f6f6;
-  box-shadow: 1px 5px 8px rgb(228, 225, 225);
+  box-shadow: 1px 2px 8px rgb(228, 225, 225);
   flex-grow: 1;
   list-style-type: none;
   transform: scale(1);
@@ -68,9 +71,6 @@
   color: #8b8686;
   margin-left: 20px;
   margin-right: 20px;
-}
-.liste .liste_fonc li .fa-store {
-  color: #9356DC;
 }
 .liste .liste_fonc li::before {
   content: counter(section);
@@ -86,12 +86,15 @@
   border-radius: 50%;
   position: absolute;
   left: -10px;
+  font-weight: 100;
 }
 .liste .liste_fonc :hover {
   cursor: pointer;
-  background-color: #e7e7e7;
-  transform: scale(1.05);
-  opacity: 1;
+  background-color: #e7def5;
+  transform: scale(1.01);
+}
+.liste .liste_fonc :hover i {
+  color: #9356DC;
 }
 
 /* section 2 */
@@ -102,7 +105,7 @@
 }
 .menu .menu_card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 30px;
 }
 .menu .menu_card .card {
@@ -167,12 +170,12 @@
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .liste_fonc {
-    flex-direction: column;
+@media (min-width: 768px) {
+  .liste .liste_fonc {
+    flex-direction: row;
   }
   .menu .menu_card {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 /* animation loader*/
@@ -277,7 +280,7 @@
 }
 .card .card_wrapper .card_menus {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 40px;
 }
 .card .card_wrapper .card_menus .element1:nth-child(n+1) {
@@ -295,8 +298,15 @@
   gap: 20px;
 }
 .card .card_wrapper .card_menus .menus > h3 {
-  border-bottom: 2px solid #99E2D0;
-  width: 48px;
+  position: relative;
+}
+.card .card_wrapper .card_menus .menus > h3::before {
+  content: "";
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: -8px;
+  width: 47px;
+  height: 4px;
 }
 .card .card_wrapper .card_menus .menus .menus_description {
   background-color: rgb(255, 255, 255);
@@ -387,10 +397,13 @@
   font-weight: 800;
 }
 
-@media (max-width: 860px) {
+@media (min-width: 768px) {
   .card .card_wrapper .card_menus {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+  }
+  .card .card_wrapper .card_menus .menus_description .menus_price {
+    margin-right: 15px;
   }
 }
 /* footer pour toutes les pages*/
